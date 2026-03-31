@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cor_fundo">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="! ! ! JO KEN PÔ ! ! !"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/cor_titulo"
+        android:letterSpacing="0.1"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="40dp"/>
+
+    <!-- PLACAR -->
+    <TextView
+        android:id="@+id/txtPlacarTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLACAR"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtPlacarUsuario"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="0"
+        android:gravity="center"
+        android:background="@drawable/caixa_jogo"
+        android:textColor="@color/cor_titulo"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txtPlacarTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"/>
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player1"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/txtPlacarUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="65dp"/>
+
+    <TextView
+        android:id="@+id/txtPlacarPC"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="0"
+        android:gravity="center"
+        android:background="@drawable/caixa_jogo"
+        android:textColor="@color/cor_titulo"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txtPlacarTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"/>
+
+    <TextView
+        android:id="@+id/txtPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOOT"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/txtPlacarUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="75dp"/>
+
+    <!-- CAIXA DA IMAGEM -->
+    <ImageView
+        android:id="@+id/imgJogada"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img_padrao"
+        android:background="@drawable/caixa_jogo"
+        android:padding="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/txtPlacarUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="40dp"/>
+
+    <!-- TEXTO ESCOLHA -->
+    <TextView
+        android:id="@+id/txtEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha sua opção de jogada:"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/imgJogada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="30dp"/>
+
+    <!-- BLOCO DAS OPÇÕES DE ESCOLHA -->
+    <ImageView
+        android:id="@+id/imgPedra"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/img_pedra"
+        android:background="@drawable/caixa_jogo"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        app:layout_constraintTop_toBottomOf="@id/txtEscolha"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"/>
+
+    <ImageView
+        android:id="@+id/imgPapel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/img_papel"
+        android:background="@drawable/caixa_jogo"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        app:layout_constraintTop_toBottomOf="@id/txtEscolha"
+        app:layout_constraintStart_toEndOf="@id/imgPedra"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
+
+    <ImageView
+        android:id="@+id/imgTesoura"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/img_tesoura"
+        android:background="@drawable/caixa_jogo"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        app:layout_constraintTop_toBottomOf="@id/txtEscolha"
+        app:layout_constraintStart_toEndOf="@id/imgPapel"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="50dp"/>
+
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="REINICIAR"
+        android:textStyle="bold"
+        android:backgroundTint="@color/cor_placar"
+        android:textColor="@android:color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginBottom="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
